@@ -157,7 +157,7 @@ export default function Weather() {
         </div>
 
         <a
-          href="https://github.com/nemalo/weather-app-shecodes-plus"
+          href="https://github.com/nemalo/weather-react"
           id="git-link"
           target="_blank"
           rel="noopener"
