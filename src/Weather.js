@@ -89,6 +89,7 @@ export default function Weather() {
               src="images/cloudy.png"
               className="day-weather"
               id="monday-weather-icon"
+              alt="weather icon"
             />
             <p className="day-name">Monday</p>
             <p className="high-temp">30°C</p>
@@ -99,6 +100,7 @@ export default function Weather() {
               src="images/cloudy(1).png"
               className="day-weather"
               id="tuesday-weather-icon"
+              alt="weather icon"
             />
             <p className="day-name">Tuesday</p>
             <p className="high-temp">26°C</p>
@@ -109,6 +111,7 @@ export default function Weather() {
               src="images/rain.png"
               className="day-weather"
               id="wednesday-weather-icon"
+              alt="weather icon"
             />
             <p className="day-name">Wednesday</p>
             <p className="high-temp">24°C</p>
@@ -119,6 +122,7 @@ export default function Weather() {
               src="images/rain.png"
               className="day-weather"
               id="thursday-weather-icon"
+              alt="weather icon"
             />
             <p className="day-name">Thursday</p>
             <p className="high-temp">24°C</p>
@@ -129,6 +133,7 @@ export default function Weather() {
               src="images/rain(2).png"
               className="day-weather"
               id="friday-weather-icon"
+              alt="weather icon"
             />
             <p className="day-name">Friday</p>
             <p className="high-temp">22°C</p>
@@ -139,6 +144,7 @@ export default function Weather() {
               src="images/rain(1).png"
               className="day-weather"
               id="saturday-weather-icon"
+              alt="weather icon"
             />
             <p className="day-name">Saturday</p>
             <p className="high-temp">21°C</p>
@@ -149,6 +155,7 @@ export default function Weather() {
               src="images/cloudy.png"
               className="day-weather"
               id="sunday-weather-icon"
+              alt="weather icon"
             />
             <p className="day-name">Sunday</p>
             <p className="high-temp">21°C</p>
@@ -160,7 +167,6 @@ export default function Weather() {
           href="https://github.com/nemalo/weather-react"
           id="git-link"
           target="_blank"
-          rel="noopener"
           rel="noreferrer"
         >
           Coded by Matea Mirosevic
