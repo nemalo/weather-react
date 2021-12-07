@@ -48,7 +48,7 @@ export default function Weather() {
             </div>
             <img
               src="images/sun.png"
-              alt="image showing current weather condition"
+              alt="current weather condition"
               className="current-weather-icon"
               id="current-weather-icon-id"
             />
