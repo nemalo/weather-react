@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./styles.css";
-import "./Weather.css";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -161,6 +161,7 @@ export default function Weather() {
           id="git-link"
           target="_blank"
           rel="noopener"
+          rel="noreferrer"
         >
           Coded by Matea Mirosevic
         </a>
