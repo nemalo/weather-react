@@ -86,7 +86,7 @@ export default function Weather() {
         <div className="row weekly-forecast" id="weekly-weather-forecast">
           <div className="col weekday">
             <img
-              src="images/cloudy.png"
+              src="./images/cloudy.png"
               className="day-weather"
               id="monday-weather-icon"
               alt="weather icon"
@@ -141,7 +141,7 @@ export default function Weather() {
           </div>
           <div className="col weekday">
             <img
-              src="images/rain(1).png"
+              src="./images/rain(1).png"
               className="day-weather"
               id="saturday-weather-icon"
               alt="weather icon"
