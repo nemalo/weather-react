@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -16,6 +18,21 @@ export default function Weather(props) {
       iconUrl: "",
       date: new Date(response.data.dt * 1000),
     });
+  }
+
+  function search() {
+    const apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
@@ -77,12 +94,13 @@ export default function Weather(props) {
             </div>
 
             <div className="col-5 search-bar text-center">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <input
                   type="search"
                   name="search"
                   placeholder="Enter city"
                   id="weather-search-bar"
+                  onChange={handleCityChange}
                 />
                 <button
                   type="button"
@@ -105,85 +123,7 @@ export default function Weather(props) {
             </div>
           </div>
 
-          <div className="row weekly-forecast" id="weekly-weather-forecast">
-            <div className="col weekday">
-              <img
-                src="./images/cloudy.png"
-                className="day-weather"
-                id="monday-weather-icon"
-                alt="weather icon"
-              />
-              <p className="day-name">Monday</p>
-              <p className="high-temp">30°C</p>
-              <p className="low-temp">18°C</p>
-            </div>
-            <div className="col weekday">
-              <img
-                src="images/cloudy(1).png"
-                className="day-weather"
-                id="tuesday-weather-icon"
-                alt="weather icon"
-              />
-              <p className="day-name">Tuesday</p>
-              <p className="high-temp">26°C</p>
-              <p className="low-temp">18°C</p>
-            </div>
-            <div className="col weekday">
-              <img
-                src="images/rain.png"
-                className="day-weather"
-                id="wednesday-weather-icon"
-                alt="weather icon"
-              />
-              <p className="day-name">Wednesday</p>
-              <p className="high-temp">24°C</p>
-              <p className="low-temp">17°C</p>
-            </div>
-            <div className="col weekday">
-              <img
-                src="images/rain.png"
-                className="day-weather"
-                id="thursday-weather-icon"
-                alt="weather icon"
-              />
-              <p className="day-name">Thursday</p>
-              <p className="high-temp">24°C</p>
-              <p className="low-temp">17°C</p>
-            </div>
-            <div className="col weekday">
-              <img
-                src="images/rain(2).png"
-                className="day-weather"
-                id="friday-weather-icon"
-                alt="weather icon"
-              />
-              <p className="day-name">Friday</p>
-              <p className="high-temp">22°C</p>
-              <p className="low-temp">16°C</p>
-            </div>
-            <div className="col weekday">
-              <img
-                src="./images/rain(1).png"
-                className="day-weather"
-                id="saturday-weather-icon"
-                alt="weather icon"
-              />
-              <p className="day-name">Saturday</p>
-              <p className="high-temp">21°C</p>
-              <p className="low-temp">13°C</p>
-            </div>
-            <div className="col weekday">
-              <img
-                src="images/cloudy.png"
-                className="day-weather"
-                id="sunday-weather-icon"
-                alt="weather icon"
-              />
-              <p className="day-name">Sunday</p>
-              <p className="high-temp">21°C</p>
-              <p className="low-temp">12°C</p>
-            </div>
-          </div>
+          <WeatherInfo data={weatherData} />
 
           <a
             href="https://github.com/nemalo/weather-react"
@@ -197,10 +137,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading";
   }
 }
