@@ -53,6 +53,10 @@ export default function Weather(props) {
                     </p>
                   </div>
                   <p className="current-weather-condition">sunny</p>
+                  <img
+                    src={weatherData.iconUrl}
+                    alt={weatherData.description}
+                  />
                 </div>
                 <div className="col temp-current">
                   <p className="temp-now">
@@ -65,8 +69,8 @@ export default function Weather(props) {
               </div>
               <div className="row">
                 <img
-                  src={weatherData.iconUrl}
-                  alt={weatherData.description}
+                  src="images/wind.png"
+                  alt="wind icon"
                   className="col-2 windy-icon"
                 />
                 <p className="col-2 wind">
