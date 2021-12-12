@@ -6,7 +6,7 @@ export default function WeatherInfo(props) {
       <div className="row weekly-forecast" id="weekly-weather-forecast">
         <div className="col weekday">
           <img
-            src="./images/cloudy.png"
+            src=".//images/cloudy.png"
             className="day-weather"
             id="monday-weather-icon"
             alt="weather icon"
@@ -17,7 +17,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weekday">
           <img
-            src="images/cloudy(1).png"
+            src="/images/cloudy(1).png"
             className="day-weather"
             id="tuesday-weather-icon"
             alt="weather icon"
@@ -28,7 +28,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weekday">
           <img
-            src="images/rain.png"
+            src="/images/rain.png"
             className="day-weather"
             id="wednesday-weather-icon"
             alt="weather icon"
@@ -39,7 +39,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weekday">
           <img
-            src="images/rain.png"
+            src="/images/rain.png"
             className="day-weather"
             id="thursday-weather-icon"
             alt="weather icon"
@@ -50,7 +50,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weekday">
           <img
-            src="images/rain(2).png"
+            src="/images/rain(2).png"
             className="day-weather"
             id="friday-weather-icon"
             alt="weather icon"
@@ -61,7 +61,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weekday">
           <img
-            src="./images/rain(1).png"
+            src=".//images/rain(1).png"
             className="day-weather"
             id="saturday-weather-icon"
             alt="weather icon"
@@ -72,7 +72,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weekday">
           <img
-            src="images/cloudy.png"
+            src="/images/cloudy.png"
             className="day-weather"
             id="sunday-weather-icon"
             alt="weather icon"
