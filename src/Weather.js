@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
 import WeatherIcons from "./WeatherIcons";
+import "./styles.css";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -53,9 +54,8 @@ export default function Weather(props) {
                       <FormattedDate date={weatherData.date} />
                     </p>
                   </div>
-                  <p className="current-weather-condition">
-                    <WeatherIcons code={weatherData.icon} />
-                  </p>
+                  <p className="current-weather-condition"></p>
+                  <WeatherIcons code={weatherData.icon} />
                   <img
                     src={weatherData.iconUrl}
                     alt={weatherData.description}
