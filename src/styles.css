@@ -59,11 +59,16 @@ div.conditions-today {
   display: flex;
 }
 
+span.temp-current {
+  display: flex;
+}
+
 .temp-now {
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 4em;
-  margin: 0.2em 0.2em 0 -0.5em;
+  margin: 0.2em 0.2em 0 0;
+  width: 60px;
 }
 
 .temp-celsius,
