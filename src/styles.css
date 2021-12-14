@@ -32,12 +32,13 @@ div.conditions-today {
   font-size: 3em;
 }
 
+span.day-time,
 .day-time {
   font-family: "Urbanist", sans-serif;
   display: flex;
-  margin-top: -10px;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 500;
+  margin-left: -5px;
 }
 
 .current-day,
