@@ -18,7 +18,7 @@ export default function WeatherTemperature(props) {
         <p className="temp-now">{Math.round(props.celsius)}</p>
         <p className="temp-celsius unit">°C</p>
         <p className="temp-divider">|</p>
-        <a href="/" onCLick={showFahrenheit} className="temp-fahrenheit unit">
+        <a href="/" onClick={showFahrenheit} className="temp-fahrenheit unit">
           °F
         </a>
       </span>
@@ -27,8 +27,8 @@ export default function WeatherTemperature(props) {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
     return (
       <span>
-        <p className="temp-now">{Math.round(props.fahrenheit)}</p>
-        <a href="/" onCLick={showCelsius} className="temp-celsius unit">
+        <p className="temp-now">{Math.round(fahrenheit)}</p>
+        <a href="/" onClick={showCelsius} className="temp-celsius unit">
           °C
         </a>
         <p className="temp-divider">|</p>
