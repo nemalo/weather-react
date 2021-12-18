@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
-import WeatherInfo from "./WeatherInfo";
+
 import WeatherIcons from "./WeatherIcons";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 import "./styles.css";
 import axios from "axios";
 
@@ -126,7 +127,7 @@ export default function Weather(props) {
             </div>
           </div>
 
-          <WeatherInfo data={weatherData} />
+          <WeatherForecast />
 
           <a
             href="https://github.com/nemalo/weather-react"
