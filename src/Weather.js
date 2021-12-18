@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
-
+import WeatherInfo from "./WeatherInfo";
 import WeatherIcons from "./WeatherIcons";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherForecast from "./WeatherForecast";
