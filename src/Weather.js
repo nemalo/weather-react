@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
-import WeatherIcons from "./WeatherIcons";
+import WeatherIconMain from "./WeatherIconMain";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherForecast from "./WeatherForecast";
 import "./styles.css";
@@ -57,7 +57,7 @@ export default function Weather(props) {
                     </p>
                   </div>
                   <p className="current-weather-condition"></p>
-                  <WeatherIcons code={weatherData.icon} />
+                  <WeatherIconMain code={weatherData.icon} />
                   <img
                     src={weatherData.iconUrl}
                     alt={weatherData.description}
