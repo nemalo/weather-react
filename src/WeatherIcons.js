@@ -5,7 +5,7 @@ export default function WeatherIcon(props) {
     <img
       src={`/images/${props.code}.png`}
       alt="weather"
-      className="current-weather-icon"
+      className="day-weather"
     />
   );
 }
