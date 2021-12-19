@@ -1,10 +1,31 @@
 import axios from "axios";
 import React from "react";
+import WeatherForecastDay from "./WeatherForecastDay";
 import WeatherIcons from "./WeatherIcons";
 
 export default function WeatherForecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
   function handleResponse(response) {
-    console.log(response.data);
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+  if (loaded) {
+    return (
+      <div className="WeatherInfo">
+        <div className="row weekly-forecast" id="weekly-weather-forecast">
+          {forecast.map(function (dailyForecast, index) {
+            return (
+              <span key={index}>
+                <WeatherForecastDay data={dailyForecast} />
+              </span>
+            );
+          })}
+        </div>
+      </div>
+    );
   }
 
   let apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
