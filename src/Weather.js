@@ -58,10 +58,6 @@ export default function Weather(props) {
                   </div>
                   <p className="current-weather-condition"></p>
                   <WeatherIconMain code={weatherData.icon} />
-                  <img
-                    src={weatherData.iconUrl}
-                    alt={weatherData.description}
-                  />
                 </div>
                 <div className="col temp-current">
                   <WeatherTemperature celsius={weatherData.temperature} />
@@ -89,12 +85,6 @@ export default function Weather(props) {
                   <span id="humidity_percent">{weatherData.humidity}</span>%
                 </p>
               </div>
-              <img
-                src="images/sun.png"
-                alt="current weather condition"
-                className="current-weather-icon"
-                id="current-weather-icon-id"
-              />
             </div>
 
             <div className="col-5 search-bar text-center">
@@ -109,19 +99,10 @@ export default function Weather(props) {
                 <button
                   type="button"
                   value="search_button"
-                  className="search-button"
-                  id="submit-search"
-                >
-                  <i className="fas fa-search"></i>
-                </button>
-
-                <button
-                  type="button"
-                  value="current_location"
                   className="current-location"
                   id="submit-current-location"
                 >
-                  Current location
+                  Search
                 </button>
               </form>
             </div>
