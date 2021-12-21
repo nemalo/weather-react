@@ -107,9 +107,7 @@ export default function Weather(props) {
               </form>
             </div>
           </div>
-
           <WeatherForecast coordinates={weatherData.coordinates} />
-
           <a
             href="https://github.com/nemalo/weather-react"
             id="git-link"
@@ -118,6 +116,10 @@ export default function Weather(props) {
           >
             Coded by Matea Mirosevic
           </a>
+          <br />
+          <p className="text-center small-text">
+            This app is only desktop friendly :)
+          </p>
         </div>
       </div>
     );
