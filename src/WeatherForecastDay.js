@@ -31,11 +31,7 @@ export default function WeatherForecastDay(props) {
 
   return (
     <div className="col weekday">
-      <WeatherIcons
-        code="01d"
-        className="day-weather"
-        id="monday-weather-icon"
-      />
+      <WeatherIcons code={props.data.weather[0].icon} />
       <p className="day-name">{day()}</p>
       <p className="high-temp">{maxTemperature()}</p>
       <p className="low-temp"> {minTemperature()}</p>
